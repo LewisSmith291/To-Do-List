@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="TaskStyle.css"></link>
+        <title>Task List</title>
+    </head>
+    <body class="lightmode-body">
+        <header id="header" class="transition light-background">
+            <div id="dark-mode-selection" class="dark-background">
+                <div class="selected-background dark-selected row-transition"></div>
+                <img id="moon-icon" class="darkmode-icon invert-filter" src="moon.svg">
+                <img id="sun-icon" class="darkmode-icon invert-filter" src="sun.svg">
+            </div>
+            <h1 id="title" class="text-lightmode">Task List Website</h1>
+            <!-- Input Form -->
+            <div class="container">
+                <form id="task-input">
+                    <input id="task-text-input" 
+                    class="transition light-background text-lightmode light-border text-lightmode" 
+                    placeholder="Input Task Here" type="text" required>
+                    <button id="add-task-button" class="transition light-border" 
+                    onclick="NewTask()" for="task-text-input">Add Task</button>
+                </form>
+            </div>
+        </header>
+        <!-- List -->
+        <div>
+            <ul id="list">
+                
+            </ul>
+        </div>
+        
+    </body>
+
+    <script src="TaskScript.js"></script>
+</html>
