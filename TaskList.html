@@ -8,6 +8,7 @@
     </head>
     <body class="lightmode-body">
         <header id="header" class="transition light-background">
+            <!-- Light/Dark Mode Selection -->
             <div id="dark-mode-selection" class="dark-background">
                 <div class="selected-background dark-selected row-transition"></div>
                 <img id="moon-icon" class="darkmode-icon invert-filter" src="moon.svg">
@@ -18,14 +19,14 @@
             <div class="container">
                 <form id="task-input">
                     <input id="task-text-input" 
-                    class="transition light-background text-lightmode light-border text-lightmode" 
-                    placeholder="Input Task Here" type="text" required>
+                        class="transition light-background text-lightmode light-border text-lightmode" 
+                        placeholder="Input Task Here" type="text" required>
                     <button id="add-task-button" class="transition light-border" 
-                    onclick="NewTask()" for="task-text-input">Add Task</button>
+                        onclick="NewTask()" for="task-text-input">Add Task</button>
                 </form>
             </div>
         </header>
-        <!-- List -->
+        <!-- Task List -->
         <div>
             <ul id="list">
                 

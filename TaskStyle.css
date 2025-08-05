@@ -5,25 +5,34 @@ body{
     transition: background-color 0.25s ease-in-out;
 }
 
+/* Stops the darkmode transition from happening  when page is resized */
 .resize-animation-stopper * {
   transition: none !important;
   animation: none !important;
 }
 
+/* Background colours */
 .light-background{
     background-color: white;
 }
-
 .dark-background{
     background-color: black;
 }
 
+/* Borders */
 .light-border{
     border:solid rgb(0, 0, 0) 0.25vw;
 }
-
 .dark-border{
     border:solid rgba(255, 255, 255, 1) 0.25vw;
+}
+
+/* Text */
+.text-lightmode{
+    color: black;
+}
+.text-darkmode{
+    color: white;
 }
 
 #header{
@@ -32,6 +41,7 @@ body{
     width: 100%;
 }
 
+/* Container for dark/light mode selection */
 #dark-mode-selection{
     position: absolute;
     top: 1vw;
@@ -49,6 +59,7 @@ body{
     cursor: pointer;
 }
 
+/* Div showing if dark or light mode is selected */
 .selected-background{
     background-color: rgb(106, 116, 255);
     position: absolute;
@@ -59,6 +70,7 @@ body{
     left: 0.5vw;
 }
 
+/* Background colour for dark/light mode symbols */
 .dark-selected{
     background-color: rgb(59, 72, 255);
 }
@@ -68,6 +80,7 @@ body{
     transform:translateX(5vw);
 }
 
+/* Sun and moon icons formatting */
 .darkmode-icon{
     width: 4vw;
     border-radius: 50px;
@@ -146,27 +159,7 @@ ul {
     padding: 0;
 }
 
-.completed-box {
-    width: 5vw;
-    height: 5vw;
-}
-
-.completed-box:hover{
-    cursor: pointer;
-}
-
-.remove-button{
-    font-size: 1vw;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 10vw;
-    height: 5vw;
-    border-radius: 25px;
-}
-
-.remove-button:hover{
-    cursor: pointer;
-}
-
+/* Container for task item */
 .list-row{
     display: flex;
     flex-direction: row;
@@ -180,6 +173,30 @@ ul {
     margin: 1vw;
 }
 
+/* Completed check box */
+.completed-box {
+    width: 5vw;
+    height: 5vw;
+}
+
+.completed-box:hover{
+    cursor: pointer;
+}
+
+/* Remove task button */
+.remove-button{
+    font-size: 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 10vw;
+    height: 5vw;
+    border-radius: 25px;
+}
+
+.remove-button:hover{
+    cursor: pointer;
+}
+
+/* Task title */
 .task-text{
     font-size: 2.5vw;
     font-family: Arial, Helvetica, sans-serif;
@@ -191,6 +208,16 @@ ul {
     background-color: rgba(0,0,0,0);
 }
 
+/* Colour of tasks */
+.task-completed{
+    background-color: rgb(65, 134, 24);
+}
+
+.task-uncompleted{
+    background-color: orange;
+}
+
+/* Transitions for swapping between light and dark mode */
 .transition{
     transition: 
     background-color 0.25s ease-in-out,
@@ -205,23 +232,8 @@ ul {
 
 }
 
-.text-lightmode{
-    color: black;
-}
-
-.text-darkmode{
-    color: white;
-}
-
+/* Editing text on tasks */
 .task-text:focus-visible{
     background-color: rgba(1, 1, 1,0.1);
     font-style: italic;
-}
-
-.task-completed{
-    background-color: rgb(65, 134, 24);
-}
-
-.task-uncompleted{
-    background-color: orange;
 }
